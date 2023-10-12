@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+$gradient: linear-gradient(60deg, #fffbcf, #fffc4d);
+
+body {
+  font-family: '맑은 고딕', Verdana, Geneva, Tahoma, sans-serif;
+  padding: 50px;
+  background: #3b3838;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+section {
+  max-width: 600px;
+  min-width: 360px;
+  margin: auto;
+  background: #fffcf3;
+  border-radius: 16px;
+
+  header {
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: $gradient;
+    border-radius: 16px 16px 0 0;
+    color: #000000;
+  }
+  .add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 10px 25px;
+
+    .add_input {
+      width: 90%;
+      height: 40px;
+      padding: 15px 25px;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      outline: 0;
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+    .addBtn {
+      width: 28px;
+      height: 28px;
+      font-size: 24px;
+      color: rgba(#000, 70%);
+      transition: 0.3s ease-in;
+
+      &:hover {
+        color: #000;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+ul.items {
+  height: 450px;
+  overflow-y: auto;
+  padding-bottom: 25px;
+  
+  .item_check {
+    appearance: unset;
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin: 15px -10px 15px 25px;
+    border: 1px solid #000;
+    border-radius: 50%;
+
+    &:checked {
+      background: #ffd012;
+      border: 2px solid #494949;
+    }
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+  
+    .item_name {
+      font-size: 13px;
+    }
+    .item_delBtn {
+      font-size: 14px;
+      color: #69696a;
+      transition: 0.3s;
+  
+      &:hover {
+        color: red;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .item_divider {
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background: #e2e3e8;
+  }
+}
